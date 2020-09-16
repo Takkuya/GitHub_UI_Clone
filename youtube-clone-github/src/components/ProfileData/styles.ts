@@ -15,19 +15,29 @@ export const Flex = styled.div`
 
   > div {
     margin-left: 24px;
+
+    > h1 {
+      font-size: 26px;
+      line-height: 1.25;
+      color: var(--gray-dark);
+      font-weight: 600;
+    }
+
+    > h2 {
+      font-size: 20px;
+      color: var(--username);
+      font-weight: 300; /*Dá um efeito mais leve a fonte*/
+    }
   }
 
-  > h1 {
-    font-size: 26px;
-    line-height: 1.25;
-    color: var(--gray-dark);
-    font-weight: 600;
-  }
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
 
-  > h2 {
-    font-size: 20px;
-    color: var(--username);
-    font-weight: 300; /*Dá um efeito mais leve a fonte*/
+    > div {
+      margin-left: 0;
+      margin-top: 16px;
+    }
   }
 `;
 
@@ -35,12 +45,17 @@ export const Flex = styled.div`
 export const Avatar = styled.img`
   width: 16%; /* No celular fica melhor se estilizarmos com apenas 16% de largura*/
   border-radius: 50%;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Row = styled.ul`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*Ele "Quebra" a linha dos followers em 2 quando o site fica em um dispositivo menor*/
+  margin: 20px 0px;
 
   > li {
     display: flex;
@@ -83,8 +98,11 @@ export const Column = styled.ul`
 
   span {
     margin-left: 5px;
+
+    /* essas opções não deixa o texto "sair para fora" na parte responsiva do site*/
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 `;
 
