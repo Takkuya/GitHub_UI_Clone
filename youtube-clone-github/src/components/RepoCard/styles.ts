@@ -15,20 +15,20 @@ export const Topside = styled.div`
   > header {
     display: inline;
     align-items: center;
-  }
 
-  > a {
-    margin-left: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--link);
+    > a {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--link);
 
-    text-decoration: none;
+      text-decoration: none;
 
-    /*Quero ter o underline de novo quando usuário passar o mouse em cima do link*/
-    &:focus,
-    &:hover {
-      text-decoration: underline;
+      /*Quero ter o underline de novo quando usuário passar o mouse em cima do link*/
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -60,10 +60,12 @@ export const Botside = styled.div`
       display: flex;
       align-items: center;
       margin-right: 16px;
-    }
 
-    > span {
-      margin-left: 5px;
+      > span {
+        margin-left: 5px;
+        font-size: 12px;
+        color: var(--gray);
+      }
     }
   }
 

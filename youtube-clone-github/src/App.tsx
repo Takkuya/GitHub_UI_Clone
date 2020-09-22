@@ -1,11 +1,12 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import "react-calendar-heatmap/dist/styles.css";
 
-import GlobalStyles from './Styles/GlobalStyles'
-import Header from './components/Header'
-import Profile from './pages/Profile'
-import Repo from './pages/Repo'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import GlobalStyles from "./Styles/GlobalStyles";
+import Header from "./components/Header";
+import Profile from "./pages/Profile";
+import Repo from "./pages/Repo";
 
 function App() {
   return (

@@ -1,19 +1,46 @@
 import React from "react";
 
-import { Container, Main, LeftSide, RightSide, Repos } from "./styles";
+import {
+  Container,
+  Main,
+  LeftSide,
+  RightSide,
+  Repos,
+  CalendarHeading,
+  RepoIcon,
+  Tab,
+} from "./styles";
 
 import ProfileData from "../../components/ProfileData";
 import RepoCard from "../../components/RepoCard";
+import RandomCalendar from "../../components/RandomCalendar";
 
 export default function Profile() {
+  const TabContent = () => (
+    <div className="content">
+      <RepoIcon />
+      <span className="label">Repositories</span>
+      <span className="number">26</span>
+    </div>
+  );
+
   return (
     <div>
       <Container>
+        <Tab className="desktop">
+          <div className="wrapper">
+            <span className="offset" />
+            <TabContent />
+          </div>
+
+          <span className="line" />
+        </Tab>
+
         <Main>
           <LeftSide>
             <ProfileData /*Adicionei os props*/
               username={"Takkuya"}
-              name={"Gabriel Takuya"}
+              name={"Gabriel Takuya Yamamoto"}
               avatarUrl={
                 "https://avatars3.githubusercontent.com/u/56007750?s=460&u=21436294beab53f1995651b60dc4f457346cf32e&v=4"
               }
@@ -27,6 +54,11 @@ export default function Profile() {
           </LeftSide>
 
           <RightSide>
+            <Tab className="mobile">
+              <TabContent />
+              <span className="line" />
+            </Tab>
+
             <Repos>
               <h2>Random repos</h2>
 
@@ -44,6 +76,12 @@ export default function Profile() {
                 ))}
               </div>
             </Repos>
+
+            <CalendarHeading>
+              Random calendar (do not represent actual data)
+            </CalendarHeading>
+
+            <RandomCalendar />
           </RightSide>
         </Main>
       </Container>
