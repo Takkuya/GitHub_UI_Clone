@@ -57,7 +57,7 @@ export const Repos = styled.div`
       grid-auto-rows: minmax(
         min-content,
         max-content
-      ); /*O tamanho da descrição é igualado em ambos os repositórios*/
+      ); /*O tamanho da descrição é igualado em ambos os "quadrados" dos repositórios*/
     }
   }
 `;

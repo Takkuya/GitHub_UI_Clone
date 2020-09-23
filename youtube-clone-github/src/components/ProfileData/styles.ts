@@ -61,16 +61,20 @@ export const Row = styled.ul`
   > li {
     display: flex;
     align-items: center;
-  }
 
-  > span {
-    font-size: 14px;
-    color: var(--gray);
-  }
+    > b {
+      font-weight: 500;
+    }
 
-  /*Aplica para todos os elementos*/
-  > * {
-    margin-right: 5px;
+    > span {
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    /*Aplica para todos os elementos*/
+    > * {
+      margin-right: 5px;
+    }
   }
 `;
 
